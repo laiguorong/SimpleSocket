@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.0;netcoreapp3.1;net35;net40;net45;net46;net461;net5.0</TargetFrameworks>
+    <PackageId>RongInfo.SimpleSocket</PackageId>
+    <PackageTags>Socket,UDP,TCP</PackageTags>
+    <Version>1.0.1</Version>
+    <FileVersion>1.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SimpleSocket.snk</AssemblyOriginatorKeyFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/laiguorong/SimpleSocket.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/laiguorong/SimpleSocket</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\ConcurrentBatchQueue.cs" />
+    <Compile Remove="Common\IBatchQueue.cs" />
+    <Compile Remove="Common\PosList.cs" />
+    <Compile Remove="Common\SendingQueue.cs" />
+    <Compile Remove="Config\IServerConfig.cs" />
+    <Compile Remove="ISocketListener.cs" />
+    <Compile Remove="ListenerInfo.cs" />
+    <Compile Remove="SocketListenerBase.cs" />
+    <Compile Remove="UdpSocketListener.cs" />
+    <Compile Remove="UdpSocketSession.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RongInfo.Caching" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
